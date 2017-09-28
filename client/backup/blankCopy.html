@@ -1,0 +1,26 @@
+
+<head>
+    <title>Quiz Page</title>
+
+</head>
+
+    <div id="content">
+           <div class="navBar">
+                <button ng-click="home()" type="button">Home</button>
+                <button type="button" ng-click="back()">Back</button>
+                <button ng-click="logout()" type="button">Logout</button>
+            </div>
+        <div  id="header">
+            <h1>{{hw.name}}</h1>
+        </div>
+        <div class="question" ng-repeat="question in hw.questions">
+            <blank-multiple-choice ng-show="hw.questions[$index].type == 'mc'" question="hw.questions[$index]"></blank-multiple-choice >
+            <blank-multiple-answer ng-show="hw.questions[$index].type == 'ma'" question="hw.questions[$index]"></blank-multiple-answer >
+            <blank-true-false ng-show="hw.questions[$index].type == 'tf'" question="hw.questions[$index]"></blank-true-false >
+            <blank-long-answer ng-show="hw.questions[$index].type == 'la'" question="hw.questions[$index]"></blank-long-answer>
+            <blank-fill-in-the-blank ng-show="hw.questions[$index].type == 'fb'" question="hw.questions[$index]"></blank-fill-in-the-blank>
+        </div>
+        <div class="question" id="footer">
+        </div>
+    </div>
+

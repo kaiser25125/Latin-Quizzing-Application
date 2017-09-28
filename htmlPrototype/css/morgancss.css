@@ -1,0 +1,144 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    overflow: auto;
+}
+
+#left {
+    display: block;
+    float: left;
+    width: 45%;
+    overflow: auto;
+    background-color: #5DADE2;
+}
+
+#right {
+    float: right;
+    width: 45%;
+    overflow: auto;
+    background-color: #5DADE2;
+}
+
+#left {
+    margin-right: 1%;
+}
+
+
+/* nav bar */
+
+.navBar {
+    margin-top: 4px;
+    margin-left: 4px;
+    overflow: auto;
+}
+
+.navBar>button {
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+
+/* Clear floats (clearfix hack) */
+
+.navBar:after {
+    content: "";
+    display: table;
+}
+
+.navBar button:not(:last-child) {
+    border-right: none;
+    /* Prevent double borders */
+}
+
+
+/* Add a background color on hover */
+
+.navBar button:hover {
+    background-color: #50555e;
+}
+
+.navBar>button:first-child {
+    border-radius: 15px 0px 0px 15px;
+}
+
+.navBar>button:nth-child(3) {
+    border-radius: 0px 15px 15px 0px;
+}
+
+
+/*nav bar */
+
+#answersection {
+    float: left;
+    margin-left: 3%;
+}
+
+#answersection p {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#answersection table {
+    width: 100%;
+    margin-bottom: 5%;
+    border-collapse: collapse;
+}
+
+#answersection td,
+#answersection th {
+    padding: 5%;
+    border: 5px solid black;
+}
+
+#answersection tr,
+#answersection th {
+    background-color: #6dc5ff;
+}
+
+#answersection tr:nth-child(even) {
+    background-color: grey;
+}
+
+#answersection td:hover,
+#answersection th:hover {
+    background-color: lightgrey;
+}
+
+#left hr {
+    border-top: 1px solid black;
+    /*need to change*/
+}
+
+#right p {
+    font-weight: bold;
+        font-size: 1.2em;
+
+}
+
+#right ul {
+    font-size: 1.2em;
+    margin: auto;
+}
+
+#right li {
+
+    margin: 3%;
+}
+
+#right a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#right a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color:lightgrey;
+}

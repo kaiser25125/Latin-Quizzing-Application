@@ -1,0 +1,9 @@
+ <form>
+
+<p ng-click="setResponse()">{{question.index}}. {{question.prompt}}
+                <div class="option" ng-repeat="option in question.options track by $index">
+                    <input type="radio" name="option" value="option" ng-click="setResponse({option:option,index:question.index})"/><p>{{option}}</p></div>
+
+                
+
+            </form>

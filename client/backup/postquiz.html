@@ -1,0 +1,40 @@
+
+<head>
+    <title>Post Quiz</title>
+  
+</head>
+
+    <div id="content">
+        	<div class="navBar">
+	    <button ng-click="home()" type="button">Home</button>
+	    <button type="button">Back</button>
+	    <button ng-click="logout()" type="button">Logout</button>
+	 
+	</div>
+        <div  id="header">
+            <h1>{{hw.name}}</h1>
+            <p id="feedback">Thank you for completing the homework, it will be counted as completed and will be added to the gradebook. 
+</p>
+        </div>
+        <div ng-repeat="question in results.questions" class="question" id="1">
+        
+            <post-multiple-choice something="question" question="question" ng-if="question.type == 'mc'" question="results.questions[$index]"></post-multiple-choice >
+            <post-multiple-answer myIndex="5" question="question" ng-if="question.type == 'ma'" question="results.questions[$index]"></post-multiple-answer >
+            <post-true-false myIndex={{results.indexOf(question)}} question="question" ng-if="question.type == 'tf'" question="results.questions[$index]"></post-true-false >
+            <post-long-answer myIndex="index" question="question" ng-if="question.type == 'la'" question="results.questions[$index]"></post-long-answer>
+            <post-fill-in-the-blank myIndex="index" question="question" ng-if="question.type == 'fb'" question="results.questions[$index]"></post-fill-in-the-blank>
+            <i ng-if="question.correct == true" class="fa fa-check" aria-hidden="true"></i>
+            <i ng-if="question.correct == false" class="fa fa-times" aria-hidden="true"></i>
+        </div>
+      
+
+
+
+        
+       
+
+        <div class="question" id="footer">
+            <button>Blank Copy</button>
+        </div>
+    </div>
+

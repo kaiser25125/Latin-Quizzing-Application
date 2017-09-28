@@ -1,0 +1,256 @@
+{
+    "classes":[
+	{
+	    "name":"Spring 2017",
+	    "_id":"123456789",
+	    "student signup code":"abcdef",
+	    "active":"true",
+	    "students":[
+	    {
+		"firstName":"alex",
+		"lastName":"luken",
+		"_id":"stu1",
+		"password":"abc123",
+		"salt":"jack",
+		"homework":[
+		    {
+			"name":"first vocab",
+			"_id":"1hw",
+			"endingMessage":"Congratulations you finished it",
+			"timestampStart":"2012-04-23T18:25:43.511Z",
+			"timestampEnd":"2012-04-23T18:28:43.511Z",		    
+			"grade":"1/2",
+			"questions":[
+			    {
+				"type":"mc",
+				"prompt":"What is the latin word for you",
+				"correct":"tu",
+				"options":[
+				    "tu",
+				    "eres",
+				    "what"
+				],
+				"studentResponse":"tu"
+			    },
+			    {
+				"type":"fb",
+				"prompt":"What is the term for a type of grammar that describes place",
+				"correct":"preposition",
+				"options":[
+				],
+				"studentResponse":"asdf"
+			    }
+			]
+		    },
+		    {
+			"name":"second vocab",
+			"_id":"2hw",
+			"endingMessage":"Congratulations you finished the second assignment",
+			"timestampStart":"2012-04-24T18:25:43.511Z",
+			"timestampEnd":"2012-04-24T18:28:43.511Z",		    
+			"grade":"1/2",
+			"questions":[
+			    {
+				"type":"la",
+				"prompt":"What are you confused about",
+				"correct":"",
+				"options":[
+				]
+			    },
+			    {
+				"type":"ma",
+				"prompt":"What are terms for grammar",
+				"correct":["preposition","noun","verb"],
+				"options":[
+				    "preposition",
+				    "noun",
+				    "verb",
+				    "alex"
+				],
+				"studentResponse":["alex"]
+			    }
+			]
+		    }
+		]
+	    },
+	    {
+		"firstName":"tim",
+		"lastName":"Mains",
+		"_id":"stu2",
+		"password":"qwer",
+		"salt":"jack",
+		"homework":[
+		    {
+			"endingMessage":"Congratulations you finished it",
+			"timestampStart":"2012-04-24T18:25:43.511Z",
+			"timestampEnd":"2012-04-24T18:28:43.511Z",		    
+			"name":"third vocab",
+			"grade":"1/2",
+			"_id":"3hw",
+			"questions":[
+			    {
+				"type":"tf",
+				"prompt":"Alex is amazing at latin",
+				"correct":"f",
+				"options":[
+				],
+				"studentResponse":"f"
+			    },
+			    {
+				"type":"fb",
+				"prompt":"What is the term for a type of grammar that is a thing",
+				"correct":"noun",
+				"options":[
+				],
+				"studentResponse":"alex"
+			    }
+			]
+		    },
+		    {
+			"name":"fourth vocab",
+			"_id":"4hw",
+			"endingMessage":"good for you",
+			"grade":"1/2",
+			"timestampStart":"2012-04-25T18:25:43.511Z",
+			"timestampEnd":"2012-04-25T18:28:43.511Z",		    
+			"questions":[
+			    {
+				"type":"la",
+				"prompt":"What else are you confused about",
+				"correct":"",
+				"options":[
+				],
+				"studentResponse":"fudge sickle"
+			    },
+			    {
+				"type":"ma",
+				"prompt":"What are good adjectives",
+				"correct":["fast","slow"],
+				"options":[
+				    "fast",
+				    "slow",
+				    "dumb",
+				    "stupid"
+				],
+				"studentResponse":["alex","slow"]
+			    }
+			]
+		    }
+		]
+	    }
+	],
+	"chapters":[
+	    {
+		"name":"section 1",
+		"order":"1",
+		"_id":"ch1",
+		"homework":[
+		    {
+			"name":"first vocab",
+			"_id":"1hw",
+			"endingMessage":"Congratulations you finished it",
+			"questions":[
+			    {
+				"type":"mc",
+				"prompt":"What is the latin word for you",
+				"correct":"tu",
+				"options":[
+				    "tu",
+				    "eres",
+				    "what"
+				]
+			    },
+			    {
+				"type":"fb",
+				"prompt":"What is the term for a type of grammar that describes place",
+				"correct":"preposition",
+				"options":[
+				]
+			}
+			]
+		    },
+		    {
+			"name":"second vocab",
+			"_id":"2hw",
+			"endingMessage":"Congratulations you finished the second assignment",
+			"questions":[
+			    {
+				"type":"la",
+				"prompt":"What are you confused about",
+				"correct":"",
+				"options":[
+				]
+			    },
+			    {
+				"type":"ma",
+				"prompt":"What are terms for grammar",
+				"correct":["preposition","noun","verb"],
+				"options":[
+				    "preposition",
+				    "noun",
+				    "verb",
+				    "alex"
+				]
+			    }
+			]
+		    }
+		]
+	    },
+	    {
+		"name":"section 2",
+		"order":"1",
+		"_id":"ch2",
+		"homework":[
+		    {
+			"name":"third vocab",
+			"_id":"3hw",
+			"endingMessage":"Nice job",
+			"questions":[
+			    {
+				"type":"tf",
+				"prompt":"Alex is amazing at latin",
+				"correct":"f",
+				"options":[
+				]
+			    },
+			    {
+				"type":"fb",
+				"prompt":"What is the term for a type of grammar that is a thing",
+				"correct":"noun",
+				"options":[
+				]
+			    }
+			]
+		    },
+		    {
+			"name":"fourth vocab",
+			"_id":"4hw",
+			"endingMessage":"good for you",
+			"questions":[
+			    {
+				"type":"la",
+				"prompt":"What else are you confused about",
+				"correct":"",
+				"options":[
+				]
+			    },
+			    {
+				"type":"ma",
+				"prompt":"What are good adjectives",
+				"correct":["fast","slow"],
+				"options":[
+				    "fast",
+				    "slow",
+				    "dumb",
+				    "stupid"
+				]
+			    }
+			]
+		    }
+		]
+	    }
+	]
+	}
+    ]
+
+}

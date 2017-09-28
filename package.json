@@ -1,0 +1,46 @@
+{
+    "name": "linuxTest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+	"test": "karma start",
+	"backTest":" mocha -u bdd -R spec -t 500 --recursive",
+	"webdriver": "webdriver-manager start",
+	"protractor": "protractor conf.js"
+    },
+    "repository": {
+	"type": "git",
+	"url": "git@code.centre.edu:alexander.luken/Alex-Morgan-latin-quiz.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+	"chai": "^3.5.0",
+	"chai-as-promised": "^6.0.0",
+	"chai-http": "^3.0.0",
+	"jasmine": "^2.5.3",
+	"jasmine-core": "^2.5.2",
+	"karma": "^1.5.0",
+	"karma-chrome-launcher": "^2.0.0",
+	"karma-jasmine": "^1.1.0",
+	"karma-ng-html2js-preprocessor": "^1.0.0",
+	"karma-phantomjs-launcher": "^1.0.2",
+	"mocha": "^3.2.0",
+	"protractor": "^5.1.1"
+    },
+    "dependencies": {
+	"body-parser": "^1.17.1",
+	"compression": "^1.6.2",
+	"express": "^4.15.2",
+	"express-session": "^1.15.2",
+	"method-override": "^2.3.8",
+	"mongoose": "^4.9.2",
+	"morgan": "^1.8.1",
+	"ng-mock": "^0.10.10",
+	"passport": "^0.2.1",
+	"passport-local": "^1.0.0",
+	"connect-flash": "~0.1.1"
+
+    }
+}

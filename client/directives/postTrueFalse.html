@@ -1,0 +1,14 @@
+ <form>
+
+<p>{{question.index}}. {{question.prompt}}
+                <div class="option" ng-repeat="option in question.options">
+                    <input  disabled="disabled" type="radio" name="option" ng-checked="option == question.response"/>
+                    
+                    <p ng-if="question.answer == option" style="color:#006600;">{{option}}</p>
+                    <p ng-if="question.answer != option">{{option}}</p>
+     
+     </div>
+
+                
+
+            </form>

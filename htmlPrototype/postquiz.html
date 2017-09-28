@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="css/quizcss.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/screenManipulation.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        	<div class="navBar">
+	    <button type="button">Home</button>
+	    <button type="button">Back</button>
+	    <button type="button">Logout</button>
+	 
+	</div>
+        <div  id="header">
+            <h1>HW 5.1</h1>
+            <p id="feedback">Thank you for completing the homework, it will be counted as completed and will be added to the gradebook. 
+</p>
+        </div>
+        <div class="question" id="1">
+            <form>
+                <p>1. What is the latin word for why?
+                    <input type="text" size="12" value="cur" disabled="disabled" />
+                </p>
+            </form>
+            <i class="fa fa-check" aria-hidden="true"></i>
+
+        </div>
+        <div class="question">
+            <form>
+
+                <p>2. What is my favorite color?</p>
+                <div class="option">
+                    <input type="radio" name="option" value="blue" disabled="disabled" checked="checked" /><p>Blue </p></div>
+
+                <div class="option">
+                    <input type="radio" value="red" name="option" disabled="disabled" /><p>Red</p></div>
+
+
+                <div class="option">
+                    <input type="radio" value="yellow" name="option" disabled="disabled"/><p class="wronganswer">Yellow</p></div>
+
+                <div class="option">
+                    <input type="radio" value="green" name="option" disabled="disabled" /><p>Green</p></div>
+
+            </form>
+            <i class="fa fa-times" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="question">
+            <form>
+
+                <p>3. Alex is fluent in latin.</p>
+                <div class="option">
+                    <input type="radio" value="yellow" name="option" checked="checked" disabled="disabled"/><p>True</p></div>
+                <div class="option">
+                    <input type="radio" value="yellow" name="option" disabled="disabled"/><p class="wronganswer">False</p></div>
+            </form>
+            <i class="fa fa-times" aria-hidden="true"></i>
+
+        </div>
+
+
+
+        <div class="question">
+            <form>
+
+                <p>4. Select my favorite foods</p>
+                <div class="option">
+                    <input type="checkbox" value="pork" name="option" disabled="disabled"/><p>Pork</p></div>
+                <div class="option">
+                    <input type="checkbox" value="pop tarts" name="option" checked="checked"disabled="disabled"/><p>Pop Tarts</p></div>
+                <div class="option">
+                    <input type="checkbox" value="Salad" name="option" disabled="disabled"checked="checked"/><p>Salad</p></div>
+                <div class="option">
+                    <input type="checkbox" value="Frozen Yogurt" name="option"disabled="disabled"checked="checked"/><p>Frozen Yogurt</p></div>
+                <div class="option">
+                    <input type="checkbox" value="Cucumbers" name="option" disabled="disabled"/><p>Cucumbers</p></div>
+            </form>
+            <i class="fa fa-check" aria-hidden="true"></i>
+
+        </div>
+             <div class="question">
+            <form>
+
+                <p>5. What did you do over the summer?</p>
+                <div class="option">
+                    <textarea name="option" rows="4" cols="20" disabled="disabled"> HAVE FUN!</textarea></div>
+            
+            </form>
+                 <i class="fa fa-check" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="question" id="footer">
+            <button>Blank Copy</button>
+        </div>
+    </div>
+</body>
+
+</html>

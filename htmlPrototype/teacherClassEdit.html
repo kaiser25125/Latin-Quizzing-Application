@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>Teacher's Class Edit</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/screenManipulation.js"></script>
+  </head>
+  <body>
+    <div class="addQuestionDiv">
+      <div class="navBar">
+	<button type="button">Home</button>
+	<button type="button">Back</button>
+	<button type="button">Logout</button>
+	<button type="button" id="editButton">Done</button>
+      </div>
+      <br>
+      <div>Latin 110 Spring 2018</div>
+      <div>Student Signup Code:8BH76W<button type="button" id="addChapterButton">Add Chapter</button></div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 1</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 2</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 3</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 4</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 5</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+	<div class="hwListing">
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect chapterListing">
+	    <option value="1" selected>1</option>
+	    <option value="2">2</option>
+	  </select>
+	  Chapter 5.1
+	  <span class="studentCompletedTab">5/7 Students Completed</span>
+	  <span class="studentCompletedTab">Due Date: 5/5/2017 9:00 am</span>
+	</div>
+	<div class="hwListing">
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect  chapterListing">
+	    <option value="1">1</option>
+	    <option value="2" selected>2</option>
+	  </select>
+
+	  Chapter 5.2
+	  <span class="studentCompletedTab">2/7 Students Completed</span>
+	  <span class="studentCompletedTab">Due Date: 5/7/2017 9:00 am</span>
+	</div>
+      </div>
+    </div>
+    <div class="questionDiv">
+      <p>Students</p>
+      <div id="teacherStudentManagement">
+	<div class="chapterEdit">
+	  <button type="button">X</button>
+	  <button type="button" title="CHANGEME">Reset Password</button>
+	  <span>Leyu Fei</span>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">X</button>
+	  <button type="button" title="CHANGEME">Reset Password</button>
+	  <span>Morgan Hites</span>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">X</button>
+	  <button type="button" title="CHANGEME">Reset Password</button>
+	  <span>Alexander Luken</span>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">X</button>
+	  <button type="button" title="CHANGEME">Reset Password</button>
+	  <span>Andrew Roche</span>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

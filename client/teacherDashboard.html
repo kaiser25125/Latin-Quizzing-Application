@@ -1,0 +1,79 @@
+
+<head>
+  <title>Teacher Dashboard</title> 
+</head>
+
+<div class="content">
+  <div class="navBar">
+    <button type="button">Home</button>
+    <button type="button" ng-click="logout()">Logout</button>
+  </div>
+  <div class="classcontent" ng-hide="deleteClassHide">
+    <span class="deleteClassSpan">Are you sure you want to delete: {{classToDelete.name}}</span>
+    <div id="deleteButtonGroup">
+      <button ng-click="cancelDeleteClass()" class="deleteButton">No</button>
+      <button ng-click="deleteClass()" class="deleteButton">Yes</button>
+    </div>
+  </div>
+  <div class="classcontent">
+    <button class="controlbuttons" ng-click="createClass()">Create New Class</button>
+    <h1>Current Class</h1>
+  </div>
+  <div class="clContent">
+    <div class="classes" ng-repeat="class in classes | filter:{oldStatus:0} | orderBy:'name'">
+      <input class="className" ng-model="class.name" ng-disabled="class.editName" />
+      <div class="classButtons">
+        <button ng-click="goToClass(class)">Go To Class</button>
+        <button ng-click="hideClass(class)">{{class.hideWord}}</button>
+        <button ng-click="renameClass(class)">{{class.editWord}}</button>
+        <button ng-click="tryDeleteClass(class)">Delete</button>
+      </div>
+    </div>
+  </div>
+  <!--
+    <div class="classes">
+      <a class="className">Latin 110 Spring 2018</a>
+      <div class="classButtons">
+        <button>Hide</button>
+        <button>Rename</button>
+        <button>Delete</button>
+      </div>
+    </div>
+    <div class="classes">
+      <a class="className">Latin 210 Spring 2018</a>
+      <div class="classButtons">
+        <button>Hide</button>
+        <button>Rename</button>
+        <button>Delete</button></div>
+    </div>
+    -->
+    <div class="classcontent">
+      <button  ng-click="toggleOld()" class="controlbuttons">Show Older Classes</button>
+    </div>
+    <!--| filter:{old:true} -->
+    <!--
+    <div class="clContent">
+      <div class="classes" ng-repeat="class in classes | filter:{oldStatus:hideOldClasses}">
+	<a class="className" contenteditable="class.editName">{{class.name}}</a>
+	<div class="classButtons">
+          <button ng-click="goToClass(class)">Go To Class</button>
+          <button ng-click="hideClass(class)">Hide</button>
+          <button ng-click="renameClass(class)">Rename</button>
+          <button ng-click="deleteClass(class)">Delete</button>
+	</div>
+      </div>
+    </div>
+    -->
+    <div class="clContent">
+      <div class="classes" ng-repeat="class in classes | filter:{oldStatus:hideOldClasses}">
+	<input class="className" ng-model="class.name" ng-disabled="class.editName" />
+	<div class="classButtons">
+          <button ng-click="goToClass(class)">Go To Class</button>
+          <button ng-click="hideClass(class)">{{class.hideWord}}</button>
+          <button ng-click="renameClass(class)">{{class.editWord}}</button>
+          <button ng-click="tryDeleteClass(class)">Delete</button>
+	</div>
+      </div>
+    </div>
+</div>
+

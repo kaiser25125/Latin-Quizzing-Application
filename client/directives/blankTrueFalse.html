@@ -1,0 +1,12 @@
+ <form>
+
+<p>{{question.index}}. {{question.prompt}}
+                <div class="option" ng-repeat="option in question.options">
+                    <input  disabled="disabled" type="radio" name="option"/>
+                    <p>{{option}}</p>
+     
+     </div>
+
+                
+
+            </form>

@@ -1,0 +1,140 @@
+  <head>
+    <title>Teacher's Class Edit</title>
+    
+  </head>
+    <div class="addQuestionDiv">
+      <div class="navBar">
+	<button type="button" ng-click="homeButton()">Home</button>
+	<button type="button">Back</button>
+	<button type="button" ng-click="logoutButton()">Logout</button>
+	<button type="button" id="editButton" ng-click="finishEdit()">Done</button>
+      </div>
+      <br>
+      <div id="className">{{class.name}}</div>
+      <div class="beginningEdit">
+	<span>
+	Student Signup Code:{{class.courseCode}}
+	</span>
+	<br>
+	<input type="text" name="newChapterName" id="newChapterName" ng-model="newChapterName"/>
+	<button type="button" id="addChapterButton" ng-click="addChapter()">Add Chapter</button>
+      </div>
+      <button type="button" name="edit duedate" ng-click="trySaveDueDate()" class="saveDueDate">Save Due Date Edits</button>
+      <div ng-hide="dueDateChange" class="dueDateDiv">
+	<div>Are you sure you want to change the date to the following homeworks:</div>
+	<div ng-repeat="hw in dueDateToChange">{{hw.chapterName}} {{hw.name}}</div>
+	<button type="button" ng-click="confirmDateChanges()" class="saveDueDate">Confirm Date Changes</button>
+      </div>
+      <div ng-hide="dltHide" class="dueDateDiv">
+	<div>Are you sure you want to delete the following chapter: {{dltChapter.name}}</div>
+	<button type="button" ng-click="deleteChapter()" class="saveDueDate">Confirm Delete Chapter</button>
+      </div>
+      <div class="chapter" ng-repeat="chapter in class.chapters | orderBy: 'index'">
+	<select name="questionOrder" form="questionForm" class="questionOrderSelect chapterListing editListing" ng-model="chapter.indexChange" ng-options="v for v in chapter.possibleIndex" ng-change="changeOptions(chapter)">
+	</select>
+
+	<div ng-click="showStuff(chapter)" class="chapterDesc">
+	  <i class="fa {{chapter.expandIcon}}" aria-hidden="true"></i><p>{{chapter.name}}</p>
+	  <i class="fa {{chapter.completeIcon}}" aria-hidden="true"></i>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button" ng-click="tryDeleteChapter(chapter)">Remove</button>
+	  <button type="button" ng-click="goToHWPage(chapter)">Add Homework</button>
+	</div>
+	<div class="hwEditListing" ng-repeat="homework in chapter.homework | filter:{hide:false}| orderBy: 'index'">
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect chapterListing editListing" ng-model="homework.indexChange" ng-options="v for v in homework.possibleIndex" ng-change="changeHw(chapter,homework)">
+	  </select>
+	  <a ng-click="showChapter(homework)">
+	    {{homework.name}}
+	  </a>
+	  <input type="datetime-local" ng-model="homework.editableDueDate" name="dueDate" />
+	  <button type="button" name="Edit Homework" ng-click="goToHWPage(chapter,homework)" class="editHwButton">Edit Homework</button>
+	</div>
+	
+      </div>
+      </div>
+      <!--
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 1</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 2</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 3</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 4</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+      </div>
+      <div class="chapter">
+	<div class="chapterDesc">
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 5</p>
+	</div>
+	<div class="chapterEdit">
+	  <button type="button">Remove</button>
+	  <button type="button">Add Homework</button>
+	</div>
+	<div class="hwListing">
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect chapterListing">
+	    <option value="1" selected>1</option>
+	    <option value="2">2</option>
+	  </select>
+	  Chapter 5.1
+	  <span class="studentCompletedTab">5/7 Students Completed</span>
+	  <span class="studentCompletedTab">Due Date: 5/5/2017 9:00 am</span>
+	</div>
+	<div class="hwListing">
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect  chapterListing">
+	    <option value="1">1</option>
+	    <option value="2" selected>2</option>
+	  </select>
+
+	  Chapter 5.2
+	  <span class="studentCompletedTab">2/7 Students Completed</span>
+	  <span class="studentCompletedTab">Due Date: 5/7/2017 9:00 am</span>
+	</div>
+      </div>
+      -->
+    </div>
+    
+    <div class="questionDiv">
+      <p>Students</p>
+      <div id="teacherStudentManagement">
+	<div class="deleteStudentDiv" ng-hide="hideDeleteStudent">
+	  Are you sure you want to delete {{dltStudent.firstName}} {{dltStudent.lastName}}<button type="button" ng-click="deleteStudent()">Confirm</button>
+	</div>
+	<div class="resetStudentDiv" ng-hide="hideResetStudent">
+	  Are you sure you want to reset the password of {{rstStudent.firstName}} {{rstStudent.lastName}}<button class="classEditButton" type="button" ng-click="resetStudent()">Confirm</button>
+
+	</div>
+	<div class="chapterEdit" ng-repeat="student in students | orderBy:'nameForOrderBy'fullName'">
+	  <button type="button" ng-click="tryDeleteStudent(student)">X</button>
+	  <button type="button" title="Reset to CHANGEME" ng-click="tryResetStudentPassword(student)">Reset Password</button>
+	  <span>{{student.firstName}} {{student.lastName}}</span>
+	</div>
+      </div>
+    </div>

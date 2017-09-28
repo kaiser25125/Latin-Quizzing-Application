@@ -1,0 +1,33 @@
+
+
+<head>
+    <title>Teacher Login</title>
+</head>
+
+
+    <div class="loginDiv">
+      <p>
+	Latin Homework
+      </p>
+      <div class="warningMessage" ng-hide="messageShow">
+	<p>The login was invalid</p>
+	</div>
+      <div class="loginField">
+	<p>Username:</p>
+	<input type="text" ng-model="username" name="login" placeHolder="Username...">
+      </div>
+      <div class="loginField">
+	<p>Password:</p>
+	<input type="password" ng-model="passwordVal" name="password" placeHolder="Password...">
+      </div>
+      <div class="loginButtonDiv">
+	<button type="button" ng-click="loginButton()">Login</button>
+      </div>
+      <div class="loginButtonDiv">
+	<button type="button" ng-click="recoverPasswordButton()">Recover Password</button>
+      </div>
+      <div class="loginButtonDiv">
+	<button type="button" ng-click="changePasswordButton()">Change Password</button>
+      </div>
+    </div>
+

@@ -1,0 +1,723 @@
+body {
+    background-color: white;
+    margin:0;
+}
+
+.loginDiv {
+    width: 60%;
+    margin: auto;
+    background-color:#5DADE2;
+}
+
+.loginDiv > p {
+    text-align: center;
+    width: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 400%;
+    position: relative;
+    top: 60px;
+}
+
+.loginField{
+    position:relative;
+    top:60px;
+    font-size:200%;
+    padding-bottom:10px;
+    background-color:#5DADE2;
+    width:60%;
+    margin:auto;
+}
+
+.loginField>input{
+    width:100%;
+    font-size:80%;
+    margin:auto;
+    display:block;
+    border-style:ridge;
+    background-color:#1A2930;
+    color:white;
+    margin-bottom:10px;
+}
+
+.loginField>p{
+    margin:0;
+    font-size:24px;
+}
+
+.optionCreator{
+    background-color:black;
+    color:white;
+    font-size:110%;
+    width:60%%;
+}
+
+.loginButtonDiv>button {
+    margin: auto;
+    text-align:center;
+    font-size:150%;
+    width:20%;
+    display:block;
+    background-color:#1A2930;
+    color:white;
+    border-radius:25px;
+}
+
+.loginButtonDiv{
+    width:100%;
+    height:30px;
+    position:relative;
+    top:60px;
+    background-color:#5DADE2;
+    padding-bottom:40px;
+}
+
+.homeworkDiv{
+    width:100%;
+}
+.addQuestionDiv{
+    width:48%;
+    background-color:#5DADE2;
+    float:left;
+}
+
+.questionDiv{
+    width:48%;
+    float:right;
+    background-color:#5DADE2;
+}
+.hwNameInput{
+    display:block;
+    margin:auto;
+    font-size:120%;
+    margin-top:6px;
+    background-color:#1A2930;
+    color:white;
+    width:100%;
+}
+
+.hwNameInput::placeholder{
+
+}
+
+.hwNameView{
+    font-size:120%;
+    text-align:left;
+    margin:1px;
+    color:#0A1612;
+}
+
+.hwDateInput{
+    display:block;
+    margin:auto;
+    font-size:120%;
+    margin-top:6px;
+    background-color:#1A2930;
+    color:white;
+    width:100%;
+}
+.hwDueDateView{
+    font-size:120%;
+    text-align:left;
+    margin:1px;
+    color:#0A1612;
+}
+.hwDateInput::placeholder{
+
+}
+
+.multipleQuestionDiv{
+    border-top:1px solid black;
+    width:100%;
+    margin-top:10px;
+    border-bottom:1px solid black;
+}
+
+.innerMultipleQuestionDiv>button{
+    margin:auto;
+    text-align:center;
+    font-size:150%;
+    width:40%;
+    display:block;
+    background-color:#1A2930;
+    color:white;
+    border-radius:25px;
+    margin-top:6px;
+    margin-bottom:6px;
+}
+
+#multipleQuestionTextArea{
+    display:block;
+    background-color:#1A2930;
+    color:white;
+    font-size:16px;
+    margin-bottom:4px;
+    width:100%;
+}
+
+.singleQuestionDiv{
+   width:100%;
+}
+
+.questionInput{
+    display:block;
+    margin:auto;
+    font-size:120%;
+    margin-top:6px;
+    background-color:#1A2930;
+    color:white;
+    margin-bottom:4px;
+    width:100%;
+}
+
+.questionInput::placeHolder{
+
+}
+#singleQuestionP{
+    border-bottom:1px dotted;
+    font-size:120%;
+    text-align:center;
+    margin:1px;
+    color:#0A1612;
+    padding-top:6px;
+    padding-bottom:6px;
+    margin-bottom:8px;
+}
+
+.singleQuestionDiv>button{
+    margin: auto;
+    text-align:center;
+    font-size:150%;
+    width:60%;
+    display:block;
+    background-color:#1A2930;
+    color:white;
+    border-radius:25px;
+    margin-bottom:10px;
+}
+.questionDiv>p:first-child{
+    font-size:120%;
+    text-align:center;
+    margin:1px;
+    color:#0A1612;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.questionOrderSelect{
+    background-color:#1A2930;
+    color:white;
+    height:30px;
+    font-size:120%;
+    margin-left:4px;
+}
+.questionDiv>div>button{
+    height:30px;
+    margin:0;
+    font-size:120%;
+    cursor:pointer;   
+}
+
+.questionDiv>div>span{
+    height:30px;
+    margin:0;
+    font-size:120%;
+}
+
+.questionAnswer{
+    height:30px;
+    margin:0;
+    font-size:110%;
+    margin-top:4px;
+    background-color:black;
+    color:white;
+}
+
+
+
+/* sign up page css*/
+
+#SignupContainer{
+    width:60%;
+    margin:auto;
+    padding-top:5%;
+    background-color:#5DADE2;
+}
+
+.signupelement {
+    width: 30%;
+    margin: auto;
+}
+
+.signupelement > input[type=text] {
+    width: 100%;
+    font-size: 100%;
+    margin: auto;
+    margin-bottom: 5%;
+    border-style: ridge;
+    background-color: #1A2930;
+    color: #C5C1C0;
+    padding: 5%;
+}
+
+.signupelement > p {
+    width: 100%;
+    font-size: 105%;
+    opacity: 0.5;
+    margin: auto;    
+    margin-bottom: 2%;
+
+}
+
+.signupelement > input[type=text]{
+    width:100%;
+    font-size:100%;
+    margin:auto;
+    border-style:ridge;
+    background-color:#1A2930;
+    color:white;
+    padding:5%;
+ }
+
+.signupbuttons {
+    width: 100%;
+    margin: auto;
+}
+
+#cancelbutton {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 150%;
+    background-color: #1A2930;
+    color: #C5C1C0;
+    border-radius: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#signupbutton {
+    width: 100%;
+    text-align: center;
+    font-size: 150%;
+    background-color: #1A2930;
+    color: #C5C1C0;
+    border-radius: 25px;
+    margin-bottom: 5%;
+}
+
+.signupLogo {
+  text-align: center;
+    width: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 400%;
+    position: relative;
+}
+
+
+/* Next portion of CSS is for the teacher dashboard */
+
+#dashboardContainer {
+    width: 90%;
+    margin: auto;
+    background-color: #5DADE2
+;
+}
+#currentClassContainer{
+    width:80%;
+    margin: auto;
+    margin-top:3%;
+
+    
+}
+#cc{
+   display:block;
+text-align: center;
+font-size: 150%;
+
+    
+}
+
+#createClassButton,#showOldButton{
+        width: 50%;
+    text-align: center;
+    font-size: 150%;
+    background-color: #1A2930;
+    color: #C5C1C0;
+    display: block;
+    border-radius: 25px;
+    margin:0 auto;
+}
+#createClassButton:hover,#showOldButton:hover{
+ background-color: #365563;
+}
+.currentClass{
+    width:50%;
+    height:10%;
+    margin:auto;
+    
+}
+.currentClass a{
+    display:block;
+    font-size: 150%;
+    text-align: center;
+    width:50%;
+        
+}
+.buttongroup{
+    overflow: auto;
+    text-align:center;
+    font-size:150%;
+    width 50%;
+
+    
+}
+.buttongroup button{
+     background-color: #1A2930;
+     color: #C5C1C0;
+    
+    border:0;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 100%;
+    cursor: pointer;
+    float: left;
+}
+.buttongroup button:hover{
+ background-color: #365563;
+}
+#signupbutton{
+      width:100%;
+    text-align:center;
+    font-size:150%;
+    background-color:#1A2930;
+    color:white;
+    border-radius:25px;
+     margin-bottom:5%;
+
+}
+#signupLogo{
+   text-align:center;
+    width:100%;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size:400%;
+    position:relative;
+}
+
+.homeworkNameDiv{
+    width:60%;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.innerMultipleQuestionDiv{
+    padding-top:10px;
+    padding-bottom:10px;
+    width:90%;
+    margin:auto;
+}
+questionDiv>div>button>i{
+    width:100%;
+    height:100%;
+}
+
+.radioAnswer{
+    font-size:120%;
+    margin-top:4px;
+    margin-bottom:0px;
+    width:100%;
+}
+
+.questionDiv>div{
+    margin-bottom:6px;
+    padding-bottom:4px;
+    border-bottom: 1px dotted;
+}
+
+.logoutbutton{
+    width: 10%;
+    text-align: center;
+    font-size: 150%;
+    background-color: #1A2930;
+    color: #C5C1C0;
+    display: block;
+    border-radius: 25px;
+    
+
+}
+
+.radioAnswer>input{
+    display:inline;
+}
+.questionEdit{
+    width:60%;
+    color:white;
+    background-color:black;
+    font-size:120%;
+}
+
+.navBar{
+    padding-top:4px;
+    margin-left:4px;
+}
+
+.navBar>button{
+    float:left;
+    font-size:14px;
+    cursor:pointer;   
+    padding:6px;
+    border:1px solid white;
+    background-color:black;
+    color:white;
+}
+/* Clear floats (clearfix hack) */
+.navBar:after {
+    content: "";
+    display: table;
+}
+
+.navBar button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.navBar button:hover {
+    background-color: #50555e;
+}
+
+.navBar>button:first-child{
+    border-radius: 15px 0px 0px 15px;
+}
+.navBar>button:nth-child(3){
+    border-radius: 0px 15px 15px 0px;
+}
+
+#addMultipleQuestionP{
+    display:inline;
+    margin-right:5px;
+}
+
+#saveSectionButton{
+    margin: auto;
+    text-align:center;
+    font-size:150%;
+    width:20%;
+    display:block;
+    background-color:#1A2930;
+    color:white;
+    border-radius:25px;
+}
+.navBar>button:nth-child(5){
+    float:right;
+    border-radius: 15px 0px 0px 15px;
+}
+.navBar>button:nth-child(4){
+    border-radius: 0px 15px 15px 0px;
+    float:right;
+}
+#editButton{
+   border-radius: 15px 15px 15px 15px;
+   width:50px;
+}
+
+.addQuestionDiv>p{
+    font-size:130%;
+    margin-top:30px;
+}
+.chapter{
+    font-size:130%;
+    cursor:pointer;  
+    margin-left:10px;
+    margin-bottom:5px;
+    margin-top:5px;
+    clear:left;
+}
+
+.chapter>div:first-child{
+    cursor:pointer;  
+    margin-left:10px;
+    margin-bottom:10px;
+    clear:right;
+}
+
+.chapter>div>i{
+    margin-bottom:5px;
+    margin-right:10px;
+}
+.chapter>div>p{
+    display:inline;
+}
+.hwListing{
+   margin-left:40px;
+   padding-bottom:20px;
+   clear:both;
+}
+
+.hwListing>i{
+    margin-left:10px;
+}
+
+.studentCompletedTab{
+   margin-left:20px;
+}
+
+#selected{
+    border:1px dotted;
+}
+
+.overallTable{
+    border-collapse:collapse;
+    width:90%;
+    margin:auto;
+}
+
+.overallTable>td,th{
+    border:1px solid black;
+    padding:6px;
+}
+
+.overallTable th>i{
+    font-size:24px;
+}
+
+tr:nth-child(even){
+    background-color:#dddddd;
+}
+
+.fa-times{
+    color:red;
+}
+#addChapterButton{
+    font-size:80%;
+    width:20%;
+    background-color:#1A2930;
+    color:white;
+    border-radius:25px;
+    display:block;
+}
+
+.addQuestionDiv>div:nth-child(4){
+    font-size:130%;
+    margin-top:30px;
+    margin-bottom:20px;
+    margin-left:10px;
+}
+.addQuestionDiv>div:nth-child(3){
+    font-size:130%;
+    margin-top:30px;
+    margin-left:10px;
+}
+.chapterManagement>button:nth-child(1){
+    border-radius: 15px 0px 0px 15px;
+}
+.chapterManagement>button:nth-child(2){
+    border-radius: 0px 15px 15px 0px;
+}
+
+.chapterManagement{
+    display:inline;
+}
+
+.chapterDesc{
+    float:left;
+    clear:left;
+}
+.chapterEdit{
+    float:left;
+    margin-left:10px;
+}
+.chapterEdit>button{
+    float:left;
+    background-color:black;
+    color:white;
+    cursor:pointer;  
+}
+
+.chapterEdit>button:nth-child(1){
+    border-radius: 15px 0px 0px 15px;
+}
+.chapterEdit>button:nth-child(2){
+    border-radius: 0px 15px 15px 0px;
+    margin-right:10px;
+}
+.chapterEdit button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+.chapterListing{
+    font-size:80%;
+    margin-left:0;
+    margin-right:4px;
+}
+
+
+.questionDiv>div>div{
+    float:none;
+    margin-left:0px;
+    padding-bottom:6px;
+    padding-top:6px;
+    padding-left:6px;
+    font-size:18px;
+    border-bottom:1px dotted black;
+}
+
+#teacherStudentManagement{
+    border:0;
+}
+.questionDiv>div>.chapterEdit:nth-child(even){
+    background-color:#dddddd;
+}
+.questionDiv>div>.chapterEdit:nth-child(odd){
+    background-color:#6dc5ff;
+}
+#studentName{
+    margin-left:20px;
+}
+
+#teacherStudentManagement>.chapterEdit{
+    cursor:pointer;   
+}
+
+.missedHW{
+    color:red;
+}
+.studentCenter{
+    width:90%;
+    background-color:#5DADE2;
+    display:block;
+    margin:auto;
+}
+
+.studentDashboard{
+    width:90%;
+    background-color:#5DADE2;
+    display:block;
+    margin:auto;
+}
+.studentDashboard>p{
+    font-size:130%;
+    margin-top:30px;
+}
+.studentDashboard>div:nth-child(4){
+    font-size:130%;
+    margin-top:30px;
+    margin-bottom:25px;
+    margin-left:10px;
+}
+#nextHWDue{
+    float:right;
+    margin-right:20px;
+    background-color:#C5C1C0;
+    font-size:24px;
+    border:1px solid black;
+}
+#nextHWDue>div{
+    border-top:1px solid black;
+}
+
+#homeworkName{
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+}

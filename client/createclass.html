@@ -1,0 +1,29 @@
+
+
+<head>
+    <title>Create Class</title>
+
+    <meta charset="utf-8">
+</head>
+
+    <div id="content">
+        <div ng-hide="errorPresent" class="warningMessage"><p>{{errorMessage}}</p></div>   
+        <div id="classnamecontrol">
+        <h1>Enter Class Name</h1>
+        <input ng-model="name" type="text" name="classname">
+</div>
+
+        <div id="classstructure">
+        <h1>Import Existing Class Structure</h1>
+        <select ng-model="selectedClass">
+          <option selected>Make class from scratch</option>
+          <option ng-repeat="class in previousClasses" value="{{class._id}}">{{class.name}}</option>
+        </select>
+
+        </div>
+        <div>
+          <button ng-click="save()" class="controlbuttons">Save</button>
+          <button ng-click="cancel()" class="controlbuttons">Cancel</button>
+        </div>
+    </div>
+

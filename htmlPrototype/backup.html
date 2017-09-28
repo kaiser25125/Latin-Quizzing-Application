@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="homeworkDiv">
+      <div class="addQuestionDiv">
+	<div>
+	  <p class="hwNameView">Homework Name</p>
+	  <input type="text" name="hwName" class="hwNameInput" placeHolder="Name of Homework...">
+	</div>
+	<div>
+	  <input type="date" name="hwDate" class="hwDateInput" placeHolder="Due Date...">
+	  <p class="hwDueDateView">Due Date</p>
+	</div>
+
+	<div class="multipleQuestionDiv">
+	  <p class="hwDueDateView">Add Multiple Questions</p>
+	  <textarea id="mutipleQuestionTextArea" rows="10" cols="40">Type in multiple questions.
+	  </textarea>
+	  <button type="button">Add</button>
+	</div>
+	<div class="singleQuestionDiv">
+	  <p id="singleQuestionP">Add Single Question</p>
+	  <input type="text" name="questionName" class="questionInput" placeHolder="Type in Question...">
+	  <p class="hwNameView">Question Name</p>
+	  <select name="questionType" form="questionForm" class="questionInput">
+	    <option value="default">Select a Question Type...</option>
+	    <option value="fillInBlank">Fill in the Blank</option>
+	    <option value="multipleChoice">Multiple Choice</option>
+	    <option value="longAnswer">Long Answer</option>
+	    <option value="trueFalse">True False</option>
+	  </select>
+	  <p class="hwNameView">Question Type</p>
+	  <button type="button">Create Question</button>
+	</div>
+      </div>
+      <div class="questionDiv">
+	<p>Questions</p>
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect">
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	  </select>
+	  <button type="button">X</button>
+      </div>
+    </div>
+  </body>
+</html>

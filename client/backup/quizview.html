@@ -1,0 +1,23 @@
+
+<head>
+    <title>Quiz Page</title>
+
+</head>
+
+    <div id="content">
+        <div  id="header">
+            <h1>{{hw.name}}</h1>
+        </div>
+        <div class="question" ng-repeat="question in hw.questions track by $index">
+            <button class="flag" ng-click="flagQuestion($index)"><i class="fa fa-flag" aria-hidden="true"></i></button>
+            <multiple-choice set-response="setResponse(option,index)" myIndex={{$index}} ng-show="hw.questions[$index].type == 'mc'" question="hw.questions[$index]"></multiple-choice >
+            <multiple-answer set-response-ma="setResponseMa(option,index)"myIndex={{$index}} ng-show="hw.questions[$index].type == 'ma'" question="hw.questions[$index]"></multiple-answer >
+            <true-false set-response="setResponse(option,index)" myIndex={{$index}} ng-show="hw.questions[$index].type == 'tf'" question="hw.questions[$index]"></true-false >
+            <long-answer myIndex={{$index}} ng-show="hw.questions[$index].type == 'la'" question="hw.questions[$index]"></long-answer>
+            <fill-in-the-blank myIndex={{$index}} ng-show="hw.questions[$index].type == 'fb'" question="hw.questions[$index]"></fill-in-the-blank>
+        </div>
+        <div class="question" id="footer">
+            <button ng-click="submit()">Submit</button>
+        </div>
+    </div>
+

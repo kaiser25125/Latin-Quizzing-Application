@@ -1,0 +1,79 @@
+  <head>
+    <title>Teacher's Class</title>
+
+  </head>
+  <div class="addQuestionDiv" ng-style="sizeCss">
+    <div class="navBar">
+	<button type="button" ng-click="homeButton()">Home</button>
+	<button type="button" id="logoutID" ng-click="logoutButton()">Logout</button>
+	<button type="button" id="doneID" ng-click="editClass()">Edit</button>
+    </div>
+    <br>
+    <div id="className">{{class.name}}</div>
+    <div>Student Signup Code:{{class.signupCode}}</div>
+    <div class="chapter" ng-repeat="chapter in class.chapters | orderBy:'index'">
+      <div ng-click="showStuff(chapter)">
+	<i class="fa {{chapter.expandIcon}}" aria-hidden="true"></i><p>{{chapter.name}}</p>
+	<i class="fa {{chapter.completeIcon}}" aria-hidden="true"></i>
+      </div>
+      <div class="hwListing" ng-repeat="homework in chapter.homework | filter:{hide:false} | orderBy:'index'">
+	<a ng-click="showChapter(homework)">
+	  {{homework.name}}
+	  <span class="studentCompletedTab">{{homework.dateString}}</span>
+	  <span class="studentCompletedTab">{{homework.completed}}/{{homework.total}}</span>
+	</a>
+      </div>
+    </div>
+  </div>
+  <div class="questionDiv" ng-style="sizeCss">
+    <p>{{displayedHw.name}}</p>
+    <table class="overallTable" ng-hide="hideInfo">
+      <tr>
+	<th>
+	  Name
+	</th>
+	<th ng-repeat="number in range(displayedHw.correctFraction.length)" ng-click="goToQuestionOverview($index)" class="names">
+	  Question {{$index+1}}
+	  </th>
+	<th>
+	  Time
+	  </th>
+      </tr>
+      <tr ng-repeat="student in displayedHw.student | orderBy:'nameForOrderBy'">
+	<th ng-click="goToStudentOverview(student._id)" class="names">
+	  {{student.name}}
+	</th>
+	<th ng-repeat="picture in student.responsePic track by $index">
+	  <i class="fa {{picture.pic}}" aria-hidden="true"></i>{{picture.text}}
+	</th>	  
+	<th>
+	  {{student.time}}
+	</th>
+	</tr>
+      <tr>
+	<th>
+	  Number Correct
+	</th>
+	<th ng-repeat="frac in displayedHw.correctFraction">
+	  {{frac.correct}}/{{frac.total}}
+	  </th>
+	<th>
+	  -:--
+	</th>
+      </tr>
+      <tr>	 
+	<th>
+	  Flag
+	  </th>
+	<th ng-repeat="fg in displayedHw.flag">
+	  {{fg.flagged}}/{{fg.total}}
+	</th>
+	<th>
+	  -:--
+	</th>
+      </tr>
+      
+    </table>
+
+  </div>
+  

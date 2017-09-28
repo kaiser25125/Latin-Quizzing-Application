@@ -1,0 +1,150 @@
+<head>
+  <title>Homework Manager</title>
+   
+</head>
+<div class="homeworkDiv">
+  <div ng-hide="messageError" class="warningMessage">
+    {{errorMessage}}
+  </div>
+  <div class="addQuestionDiv">
+    <div class="navBar">
+      <button type="button" ng-click="homeButton()">Home</button>
+      <button id="logoutID"type="button" ng-click="logoutButton()">Logout</button>
+      <button id="saveID" type="button" ng-click="save()">Save Changes</button>
+    <button id="cancelID" type="button" ng-click="cancel()">Cancel</button>
+
+    </div>
+
+    <br><br>
+    <div class="homeworkNameDiv" id="homeworkName">
+      <p class="hwNameView">Homework Name:</p>
+      <input type="text" name="hwName" ng-model="hw.name" class="hwNameInput" placeHolder="Name of Homework...">
+    </div>
+    <div class="homeworkNameDiv">
+      <p class="hwDueDateView">Due Date:</p>
+        <input id="datePick" ng-model="hw.dueDate" datetime-picker  placeHolder="Click to select a date"/>
+      </div>
+    <div class="homeworkNameDiv">
+      <p class="hwDueDateView">Ending Message:</p>
+      <input type="text" name="hwDate" class="hwDateInput" placeHolder="Message after quiz..." ng-model="hw.endingMessage">
+    </div>
+    <div class="multipleQuestionDiv">
+      <div class="innerMultipleQuestionDiv">
+          <p class="hwDueDateView" id="addMultipleQuestionP">Add Multiple Questions</p> <a href="help.html" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"  title="Click for help with bulk add feature"></i></a>
+	<textarea wrap="off" id="multipleQuestionTextArea" ng-model="html" rows="10" placeholder="Type in multiple questions."></textarea>
+	<button type="button" ng-click="bulkAdd()">Add</button>
+	  </div>
+    </div>
+    <div class="singleQuestionDiv">
+      <p id="singleQuestionP">Add Single Question</p>
+        <p class ="warningMessage" ng-if="error == true">Fill out the required fields</p>
+      <div class="homeworkNameDiv">
+	<p class="hwNameView">Question Prompt</p>
+	<input type="text" name="questionName" class="questionInput" placeHolder="Type in Question..." ng-model="questionName">
+      </div>
+      <div class="homeworkNameDiv">
+	<p class="hwNameView">Question Type</p>
+	<select name="questionType" form="questionForm" class="questionInput" ng-model="questionType">
+	    <option value="fillInBlank">Fill in the Blank</option>
+	    <option value="multipleChoice">Multiple Choice</option>
+	    <option value="longAnswer">Long Answer</option>
+	    <option value="trueFalse">True False</option>
+	    <option value="multipleAnswer">Multiple Answer</option>
+	</select>
+      </div>
+      <div class="homeworkNameDiv">
+	<p ng-show ="questionType == 'multipleAnswer' || questionType == 'multipleChoice'" class="hwNameView">Number of Options: </p>
+        
+	<select ng-show ="questionType == 'multipleAnswer' || questionType == 'multipleChoice'" name="questionType" form="questionForm" class="questionInput" ng-model="optionNumber" ng-change="range(1,convertInt(optionNumber))">
+	  <!-- default to 4 -->
+	  <option  value="1">1</option>
+	  <option  value="2">2</option>
+	  <option   value="3">3</option>
+	  <option  value="4" >4</option>
+	  <option  value="5">5</option>
+	  <option  value="6">6</option>
+	</select>
+	<p class="hwNameView">Answer:</p>
+          <p class="hwNameView" ng-show="questionType == 'longAnswer'">Not applicable to long answer questions</p>
+	<form ng-show="questionType == 'multipleAnswer'">
+	  <div  ng-repeat="x in questionArray">
+	    <input  type="checkbox"  name="option" ng-model="x.chosen.selected">
+          <input placeholder="Answer..." class="optionCreator" type="text" name="questionName" ng-model="x.option">  
+	  </div>
+    </form>
+    <form ng-show="questionType == 'multipleChoice'">
+	  <div  ng-repeat="x in questionArray">
+	    <input  ng-model="x.chosen.selected" type="radio"  name="option" value="true" ng-click="resetValues($index)">
+          <input placeholder="Answer..." class="optionCreator" type="text" name="questionName" ng-model="x.option">
+       
+          
+	  </div>
+    </form>
+             <form ng-show="questionType == 'fillInBlank'">
+	  
+	    <input placeholder="Answer..." class="optionCreator" type="text" name="questionName" ng-model="fbAnswer">
+    </form>
+          <form ng-show="questionType == 'trueFalse'">
+	  
+	    <input type="radio"  ng-model="tfAnswer" name="option" value="True" checked>True
+	    <input type="radio" ng-model="tfAnswer"  name="option" value="False">False
+    </form>
+          
+          
+	  </div>
+      <button type="button" ng-click="createQuestion()">Create Question</button>
+    </div>
+  </div>
+  <div class="questionDiv">
+    <p><strong>Questions</strong></p>
+    <div ng-repeat= "x in hw.questions track by $index" ng-init="questionIndex = $index"> 
+     <select name="questionOrder" form="questionForm" class="questionOrderSelect" ng-model="x.index" ng-options="question.index as question.index for question in hw.questions" ng-change="indexChanged(x,{{x.index}})">
+         
+      </select>
+  
+      <button type="button" ng-click="spliceHere(questionIndex)"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+          <span><input type="text" name="questionName" class="questionAnswer" ng-model="hw.questions[questionIndex].prompt"></span>
+        <div ng-show="hw.questions[questionIndex].type == 'fb'">
+        <input  type="text" name="questionName" class="questionAnswer" ng-model="x.answer">
+        </div>
+        <div ng-show="hw.questions[questionIndex].type == 'mc'" class="radioAnswer">
+	<form>
+        <div ng-repeat="y in hw.questions[questionIndex].options track by $index" >
+	  <input type="radio"  name="option" ng-checked="hw.questions[questionIndex].options[$index] == hw.questions[questionIndex].answer" ng-click="radioAlterAnswer(hw.questions[questionIndex],$index)"/>
+            
+            <input type="text" name="questionName" class="questionAnswer" ng-model="hw.questions[questionIndex].options[$index]" ng-change="alterAnswer(hw.questions[questionIndex],$index)" value="{{hw.questions[questionIndex].options[$index]}}"/>
+                        </div>
+	</form>
+      </div>
+        <div ng-show="hw.questions[questionIndex].type == 'tf'" class="radioAnswer">
+	<form>
+        <div ng-repeat="y in hw.questions[questionIndex].options track by $index">
+	  <input type="radio"  name="option" ng-checked="hw.questions[questionIndex].options[$index] == hw.questions[questionIndex].answer" value="{{hw.questions[questionIndex].options[$index]}}" ng-click="radioAlterAnswer(hw.questions[questionIndex],$index)"/>
+            
+            {{hw.questions[questionIndex].options[$index]}}
+                        </div>
+	</form>
+      </div>
+        
+        <div ng-show="hw.questions[questionIndex].type == 'ma'"class="radioAnswer">
+    	<form>
+            <div ng-repeat="y in hw.questions[questionIndex].options track by $index">
+	<input type="checkbox"  name="option" ng-checked="hw.questions[questionIndex].answer.includes(hw.questions[questionIndex].options[$index])" ng-click="checkAlterAnswer(hw.questions[questionIndex],$index)">
+                <input type="text" name="questionName" class="questionAnswer" ng-model="hw.questions[questionIndex].options[$index]" ng-change="setIndex(questionIndex,$index)"/>
+            </div>
+            </form>
+      </div>  
+        <div ng-show="hw.questions[questionIndex].type == 'la'"class="radioAnswer">
+    	<p>Answer Not Applicable</p>
+      </div> 
+
+    </div>
+
+    
+
+    
+
+
+	<!--<br></br>-->
+      </div>
+    </div>

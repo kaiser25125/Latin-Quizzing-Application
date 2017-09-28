@@ -1,0 +1,64 @@
+
+
+#content {
+    overflow: auto;
+    background-color: #5DADE2;
+}
+
+#classnamecontrol {
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+}
+
+#classnamecontrol input {
+    font-size:20px;
+    margin:auto;
+    border-style:ridge;
+    background-color:#1A2930;
+    color:white;
+    padding:.5em;
+}
+
+#classnamecontrol h1 {
+    display: inline;
+    margin: .5em;
+}
+
+#classstructure {
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+}
+
+#classstructure h1 {
+    display: inline;
+    margin: .5em;
+}
+
+#classstructure select {
+    display: block;
+    margin: auto;
+    font-size: 120%;
+    margin-top: 6px;
+    background-color: #1A2930;
+    color: white;
+    padding: .5em;
+}
+
+.controlbuttons {
+    width: 5em;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #1A2930;
+    color: #C5C1C0;
+    display: block;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-bottom: .5em;
+    padding: .25em;
+}
+
+.controlbuttons:hover {
+    background-color: #365563;
+}

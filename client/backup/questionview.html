@@ -1,0 +1,48 @@
+
+<head>
+    <title>Question View</title>
+   
+</head>
+
+    <div class="content">
+
+        <div id="left">
+            <div class="navBar">
+                <button ng-click="home()" type="button">Home</button>
+                <button type="button">Back</button>
+                <button ng-click="logout()" type="button">Logout</button>
+            </div>
+            <div id="answersection">
+                <p>Question {{currentIndex + 1}}: {{hw.questions[currentIndex].prompt}}</p>
+                <p>Answer: {{hw.questions[currentIndex].answer}}</p>
+                <table>
+                    <tr>
+                        <th>Student</th>
+                        <th>Student Answer</th>
+                    </tr>
+                    <tr ng-repeat="student in hw.questions[currentIndex].students | orderBy:'nameForOrderBy'">
+                        <td>{{student.name}}</td>
+                        <td>{{student.response}}</td>
+
+                    </tr>
+                   
+
+
+                </table>
+
+            </div>
+        </div>
+        <div id="right">
+
+            <p>{{hw.name}}</p>
+            <ul>
+                <li ng-click="changeIndex($index)" ng-repeat="question in hw.questions"><a>Question {{$index +1}} {{question.numberCorrect}}/{{question.students.length}}</a></li>
+            
+
+
+
+
+            </ul>
+
+
+        </div>

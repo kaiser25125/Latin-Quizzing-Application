@@ -1,0 +1,5 @@
+mongo
+use mean-test
+db.classes.drop()
+db.users.drop()
+exit

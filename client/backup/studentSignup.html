@@ -1,0 +1,44 @@
+
+<head>
+    <title>Student Signup</title>
+
+</head>
+
+    <div id="SignupContainer">
+        <div id="signupLogo">STUDENT SIGNUP</div>
+        <p ng-hide="messageShow" class="warningMessage">{{error}}</p>
+        <div class="signupelement">
+            <p>Username</p>
+            <input ng-model="username" type="text" name="userName" placeholder="Type in your username...">
+            
+        </div>
+
+        <div class="signupelement">
+            <p>First Name</p>
+            <input ng-model="firstName" type="text" name="firstName" placeholder="Type in your first name...">
+            
+        </div>
+        <div class="signupelement">
+            <p>Last Name</p>
+            <input ng-model="lastName" type="text" name="lastName" placeholder="Type in your last name....">
+            
+        </div>
+        <div class="signupelement">
+            <p>Password</p>
+            <input ng-model="passwordVal" type="password" name="password" placeholder="Type in your password...">
+        </div>
+        <div class="signupelement">
+            <p>Re-enter password</p>
+            <input ng-model="repasswordVal" type="password" name="repassword" placeholder="Re-enter password...">
+            
+        </div>
+        <div class="signupelement">
+            <p>Signup Code</p>
+            <input ng-model="signupCode" type="text" name="signup Code" placeholder="Type in the class signup code">
+            
+            <div class="signupbuttons">
+                <button id="cancelbutton" type="button" ng-click="cancelButton()">Cancel</button>
+                <button id="signupbutton" type="button" ng-click="signupButton()">Signup</button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,76 @@
+  <head>
+    <title>Student Dashboard</title>
+  </head>
+
+    <div class="studentDashboard">
+      <div class="studentButton">
+	<button type="button" ng-click="goToLogout()">Logout</button>
+	<button type="button" ng-click="goToChangePassword()">Change Password</button>
+      </div>
+      <div id="nextHWDue">
+	Next HW Due
+	<div>
+	  <a ng-click="goToHomework(nextHW)">fourth vocab 5/5/2017 9:00</a>
+	</div>
+      </div>
+      <br>
+      <div id="studentName">Alex Luken</div>
+      <div class="chapter" ng-repeat="chapter in chapters">
+	<div ng-click="showStuff(chapter)">
+	  <i class="fa {{chapter.expandIcon}}" aria-hidden="true"></i><p>{{chapter.name}}</p>
+	  <i class="fa {{chapter.completeIcon}}" aria-hidden="true"></i>
+	</div>
+	<div class="hwListing" ng-repeat="homework in chapter.homework | filter:{hide:false}">
+	  <a ng-click="goToHomework(homework)">
+	    {{homework.name}}
+	    <span class="studentCompletedTab">{{homework.dateString}}</span>
+	    <span class="studentCompletedTab"><i class="fa {{homework.symbol}}" aria-hidden="true"></i></span>
+	    </a>
+	</div>
+      </div>
+      <!--
+      <div class="chapter">
+	<div>
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 1</p>
+	  <i class="fa fa-check-circle" aria-hidden="true"></i>
+	</div>
+      </div>
+      <div class="chapter">
+	<div>
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 2</p>
+	  <i class="fa fa-check-circle" aria-hidden="true"></i>
+	</div>
+      </div>
+      <div class="chapter">
+	<div>
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 3</p>
+	  <i class="fa fa-times-circle" aria-hidden="true"></i>
+	</div>
+      </div>
+      <div class="chapter">
+	<div>
+	  <i class="fa fa-plus" aria-hidden="true"></i><p>CH 4</p>
+	  <i class="fa fa-check-circle" aria-hidden="true"></i>
+	</div>
+      </div>
+      <div class="chapter">
+	<div>
+	  <i class="fa fa-minus" aria-hidden="true"></i><p>CH 5</p>
+	  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+	</div>
+	<div class="hwListing">Chapter 5.1
+	  <span class="studentCompletedTab">Due Date: 5/5/2017 9:00 am</span>
+	  <span class="studentCompletedTab"><i class="fa fa-check" aria-hidden="true"></i></span>
+	</div>
+	<div class="hwListing">Chapter 5.2
+	  <span class="studentCompletedTab">Due Date: 5/7/2017 9:00 am</span>
+	  <span class="studentCompletedTab"><i class="fa fa-times" aria-hidden="true"></i></span>
+	</div>
+	<div class="hwListing">Chapter 5.3
+	  <span class="studentCompletedTab">Due Date: 5/9/2017 9:00 am</span>
+	  <span class="studentCompletedTab"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+	</div>
+
+      </div>
+      -->
+    </div>

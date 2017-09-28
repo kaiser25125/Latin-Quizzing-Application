@@ -1,0 +1,293 @@
+body {
+    background-color: #C5C1C0;
+    margin:0;
+}
+
+.loginDiv{
+    width:60%;
+    margin: auto;
+    background-color:#F7CE3E;
+}
+
+.loginDiv > p{
+    text-align:center;
+    width:100%;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size:400%;
+    position:relative;
+    top:60px;
+}
+
+.loginField{
+    position:relative;
+    top:60px;
+    font-size:200%;
+    padding-bottom:10px;
+    background-color:#F7CE3E;
+}
+
+.loginField>input{
+    width:60%;
+    font-size:80%;
+    margin:auto;
+    display:block;
+    border-style:ridge;
+    background-color:#1A2930;
+    color:#C5C1C0;
+}
+
+
+.loginButtonDiv>button{
+    margin: auto;
+    text-align:center;
+    font-size:150%;
+    width:60%;
+    display:block;
+    background-color:#1A2930;
+    color:#C5C1C0;
+    border-radius:25px;
+}
+
+.loginButtonDiv{
+    width:100%;
+    height:30px;
+    position:relative;
+    top:60px;
+    background-color:#F7CE3E;
+    padding-bottom:20px;
+}
+
+.homeworkDiv{
+    width:100%;
+}
+.addQuestionDiv{
+    width:48%;
+    background-color:#F7CE3E;
+    float:left;
+}
+
+.questionDiv{
+    width:48%;
+    float:right;
+    background-color:#F7CE3E;
+}
+.hwNameInput{
+    display:block;
+    margin:auto;
+    font-size:120%;
+    margin-top:6px;
+    background-color:#1A2930;
+    color:white;
+    width:100%;
+}
+
+.hwNameInput::placeholder{
+   color:#C5C1C0;
+}
+
+.hwNameView{
+    font-size:120%;
+    text-align:left;
+    margin:1px;
+    color:#0A1612;
+}
+
+.hwDateInput{
+    display:block;
+    margin:auto;
+    font-size:120%;
+    margin-top:6px;
+    background-color:#1A2930;
+    color:white;
+    width:100%;
+}
+.hwDueDateView{
+    font-size:120%;
+    text-align:left;
+    margin:1px;
+    color:#0A1612;
+}
+.hwDateInput::placeholder{
+   color:#C5C1C0;
+}
+
+.multipleQuestionDiv{
+    border-top:1px solid black;
+    width:100%;
+    margin-top:10px;
+    border-bottom:1px solid black;
+}
+
+.innerMultipleQuestionDiv>button{
+    margin:auto;
+    text-align:center;
+    font-size:150%;
+    width:40%;
+    display:block;
+    background-color:#1A2930;
+    color:#C5C1C0;
+    border-radius:25px;
+    margin-top:6px;
+    margin-bottom:6px;
+}
+
+#multipleQuestionTextArea{
+    display:block;
+    background-color:#1A2930;
+    color:white;
+    font-size:16px;
+    margin-bottom:4px;
+    width:100%;
+}
+
+.singleQuestionDiv{
+   width:100%;
+}
+
+.questionInput{
+    display:block;
+    margin:auto;
+    font-size:120%;
+    margin-top:6px;
+    background-color:#1A2930;
+    color:white;
+    margin-bottom:4px;
+    width:100%;
+}
+
+.questionInput::placeHolder{
+    color:#C5C1C0;
+}
+#singleQuestionP{
+    border-bottom:1px dotted;
+    font-size:120%;
+    text-align:center;
+    margin:1px;
+    color:#0A1612;
+    padding-top:6px;
+    padding-bottom:6px;
+    margin-bottom:8px;
+}
+
+.singleQuestionDiv>button{
+    margin: auto;
+    text-align:center;
+    font-size:150%;
+    width:60%;
+    display:block;
+    background-color:#1A2930;
+    color:#C5C1C0;
+    border-radius:25px;
+    margin-bottom:10px;
+}
+.questionDiv>p{
+    font-size:120%;
+    text-align:center;
+    margin:1px;
+    color:#0A1612;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.questionOrderSelect{
+    background-color:#1A2930;
+    color:white;
+    position:relative;
+    left:10%;
+    height:30px;
+    font-size:120%;
+}
+.questionOrderSelect + button{
+    position:relative;
+    left:10%;
+    height:30px;
+    margin:0;
+    font-size:120%;
+}
+/* sign up page css*/
+#SignupContainer{
+    width:60%;
+    margin:auto;
+    padding-top:5%;
+    background-color:#F7CE3E;
+
+}
+
+
+.signupelement{
+    width:30%;
+    margin:auto;
+}
+.signupelement > input[type=text]{
+    width:100%;
+    font-size:100%;
+    margin:auto;
+    border-style:ridge;
+    background-color:#1A2930;
+    color:#C5C1C0;
+    padding:5%;
+   
+    
+    
+}.signupelement > p{
+width:100%;
+    font-size:105%;
+    opacity: 0.5;
+    margin:auto;
+   
+    
+    
+}
+.signupbuttons{
+     width:100%;
+    margin:auto;
+}
+#cancelbutton{
+         width:100%;
+
+  margin: auto;
+    text-align:center;
+    font-size:150%;
+    background-color:#1A2930;
+    color:#C5C1C0;
+    border-radius:25px;
+    margin-top:5%;
+      margin-bottom:5%;
+}
+#signupbutton{
+      width:100%;
+    text-align:center;
+    font-size:150%;
+    background-color:#1A2930;
+    color:#C5C1C0;
+    border-radius:25px;
+     margin-bottom:5%;
+
+}
+#signupLogo{
+   text-align:center;
+    width:100%;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size:400%;
+    position:relative;
+}
+
+.homeworkNameDiv{
+    width:60%;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.innerMultipleQuestionDiv{
+    padding-top:10px;
+    padding-bottom:10px;
+    width:90%;
+    margin:auto;
+}
+questionDiv>button>i{
+    width:100%;
+    height:100%;
+}
+questionDiv + p{
+    margin:10px;
+}

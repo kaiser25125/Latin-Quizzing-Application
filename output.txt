@@ -1,0 +1,464 @@
+registering mongoose
+mongoose was started
+in passport file
+in passport file
+Server running on port 8081
+
+
+Starting Server
+  I can create an admin user
+    ✓ I can add david toth as an administrator (106ms)
+
+  I should fail to create an admin
+    ✓ I can not add any other administrator
+
+  I can create a class
+    ✓ I can create a class
+    ✓ I can create a second class
+
+  I should fail to create a class
+    ✓ it should fail to create a class with the same name
+    ✓ it should fail to create a class with no name
+
+  I can add a chapter
+    ✓ I should be able to add chapter 1
+    ✓ I should be able to add chapter 'vocab practice'
+    ✓ I should be able to add chapter 'past tense'
+    ✓ I should be able to add chapter 'future tense'
+
+  I should be able to create a student
+    ✓ I can add alex luken
+    ✓ I can logout alex luken
+    ✓ alex luken should have all of latin 120 chapters
+    ✓ I can add morgan hites
+    ✓ I can logout morgan hites
+
+  I should fail to create a user
+    ✓ I will fail to recreate alex luken
+    ✓ I will fail to create a username with too small of a name
+    ✓ I will fail to create a username without a username
+    ✓ I will fail to create a username without a lastName
+    ✓ I will fail to create a username without a password
+    ✓ I will fail to create a username with too short of a password
+    ✓ I will fail to create a username with no firstName
+    ✓ I will fail to create a user without a sign up code
+    ✓ I will fail to create a user with an invalid code
+
+  I can modify orders of a chapter
+    ✓ I should be able to make 'past tense' the first chapter
+    ✓ Alex Luken should have the order changed
+    ✓ I should be able to make 'past tense' the third chapter and the third chapter should become the second,fourth should be fourth
+    ✓ I should be able to make 'past tense' the second chapter
+    ✓ I should cause an error when sending no chapter
+    ✓ I should cause an error when sending a non-existent chapter
+
+  I can add homeworks to chapters
+    ✓ I should be able to add a homework to a chapter of a class
+    ✓ I should be able to add another homework to the same chapter
+    ✓ I should fail to add a homework without a name
+    ✓ I should fail to add a homework without an ending message
+    ✓ I should fail to add a chapter without a due date
+    ✓ I should fail to add a homework where a question is missing a type
+    ✓ I should fail to add a homework where a question is missing a prompt
+
+  I should be able to get classes
+    ✓ I should be able to get all of the class names
+    ✓ it should fail to get the classes when there is no cookie
+
+  I should be able to change classes
+    ✓ I should be able to rename a class
+    ✓ I should fail to rename the class when I'm not signed in as administrator
+    ✓ I should be able to set a class to be hidden
+    ✓ I should be able to set a class to be not hidden
+    ✓ I should fail to hide a class when not signed in
+    ✓ I should be able to delete a class
+
+  Recovery Password Page
+    ✓ I should be able change my password properly (46ms)
+    ✓ I should not be able to change my password if the security answer is wrong
+    ✓ I should not be able to change my password if I don't enter in a password
+    ✓ I should not be able to change my password if I don't enter in a password
+
+  Change Password Page
+    ✓ I should be able to change my password properly (45ms)
+    ✓ I should not be able to change my password if I enter the wrong old password
+    ✓ I should not be able to change my password if I don't enter my old password
+
+  teacher edit page
+    ✓ I should be able to get all of the students properly
+    ✓ I should fail to get all of the students properly if I am not signed in
+    ✓ I should be able to delete a chapter
+    ✓ I can delete a chapter even when there are no students
+    ✓ it will not creash when recieving bad info
+
+  Teacher class edit controller
+    ✓ need to get students
+    ✓ I should be able to change a students password (48ms)
+    ✓ I should be able to change a students password (45ms)
+    ✓ I should fail to reset the password of a student when I am not signed in as admin
+    ✓ I should delete a student
+[ { chapterId: '597762fe16a2930d277b5bab',
+    hwId: '597762ff16a2930d277b5be6',
+    newDate: '1901-11-01T04:00:00.000Z' } ]
+    ✓ I should be able to change the due date of a homework
+    ✓ it should fail to set the date when there is no cookies
+undefined
+    ✓ it should fail gracefully to try to set the due date
+    ✓ I should be able to delete a homework (44ms)
+    ✓ I should be able to get student information
+
+  Student dashboard information
+    ✓ getting students
+    ✓ I should be able to sign in as alex luken
+    ✓ I should be able to get alex luken dashboard information
+    1) I should be able to get alex luken quiz information
+    ✓ I should be able to change the password of alex luken (74ms)
+
+  Student dashboard information
+    ✓ I should be able to take a quiz
+stud
+ch
+hw
+0
+0
+0
+0
+0
+hw
+0
+0
+0
+0
+0
+ch
+ch
+js
+{ results: 
+   { _id: '597762ff16a2930d277b5bec',
+     index: 1,
+     dueDate: '2019-06-05T19:00:00.000Z',
+     endingMessage: 'Nice job dude',
+     name: 'Homework 1',
+     status: 'Complete',
+     endDate: '2017-07-25T15:25:51.662Z',
+     questions: [ [Object], [Object], [Object], [Object], [Object] ] },
+  error: false }
+js
+body
+body
+    ✓ I should be able to see the results of a quiz
+
+  Teacher class controller
+    ✓ I should be able to get data
+
+  Teacher student overview controller
+five
+{ studentInfo: 
+   [ { firstName: 'Alexander',
+       lastName: 'Luken',
+       total: 2,
+       completed: 1,
+       _id: '597762fe16a2930d277b5baf',
+       color: 'black',
+       chapters: [Object] } ] }
+four
+597762ff16a2930d277b5bec
+five
+    ✓ I should be able to get data
+
+  Teacher question overview controller
+resss
+{ homework: 
+   { name: 'Homework 1',
+     questions: [ [Object], [Object], [Object], [Object], [Object] ] } }
+[ { prompt: 'What is the term for a type of grammar that describes place?',
+    answer: 'preposition',
+    numberCorrect: 0,
+    students: [ [Object] ],
+    type: 'mc' },
+  { prompt: 'What is the latin word for why?',
+    answer: 'que',
+    numberCorrect: 0,
+    students: [ [Object] ],
+    type: 'fb' },
+  { prompt: 'Morgan likes age of empires',
+    answer: 'True',
+    numberCorrect: 0,
+    students: [ [Object] ],
+    type: 'tf' },
+  { prompt: 'What did you do this summer?',
+    answer: 'Answer is not applicable',
+    numberCorrect: 1,
+    students: [ [Object] ],
+    type: 'la' },
+  { prompt: 'Select the fruits',
+    answer: 'Apples,Berries,Banannas',
+    numberCorrect: 0,
+    students: [ [Object] ],
+    type: 'ma' } ]
+resss
+    ✓ I should be able to get data for questions
+
+  Editing homework features
+rep
+{ questions: 
+   [ { options: [Object],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bf1,
+       qType: 'mc',
+       answer: 'preposition',
+       index: 1,
+       prompt: 'What is the term for a type of grammar that describes place?' },
+     { options: [],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bf0,
+       qType: 'fb',
+       index: 2,
+       answer: 'que',
+       prompt: 'What is the latin word for why?' },
+     { options: [Object],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bef,
+       qType: 'tf',
+       answer: 'True',
+       prompt: 'Morgan likes age of empires',
+       index: 3 },
+     { options: [],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bee,
+       qType: 'la',
+       prompt: 'What did you do this summer?',
+       index: 4 },
+     { options: [Object],
+       flag: false,
+       answers: [Object],
+       _id: 597762ff16a2930d277b5bed,
+       qType: 'ma',
+       prompt: 'Select the fruits',
+       index: 5 } ],
+  _id: 597762ff16a2930d277b5bec,
+  index: 1,
+  dueDate: 2019-06-05T19:00:00.000Z,
+  endingMessage: 'Nice job dude',
+  name: 'Homework 1' }
+rep
+[ { prompt: 'What is the term for a type of grammar that describes place?',
+    index: 1,
+    answer: 'preposition',
+    qType: 'mc',
+    _id: '597762ff16a2930d277b5bf1',
+    answers: [],
+    flag: false,
+    options: [ 'preposition', 'noun', 'verb' ] },
+  { prompt: 'What is the latin word for why?',
+    answer: 'que',
+    index: 2,
+    qType: 'fb',
+    _id: '597762ff16a2930d277b5bf0',
+    answers: [],
+    flag: false,
+    options: [] },
+  { index: 3,
+    prompt: 'Morgan likes age of empires',
+    answer: 'True',
+    qType: 'tf',
+    _id: '597762ff16a2930d277b5bef',
+    answers: [],
+    flag: false,
+    options: [ 'True', 'False' ] },
+  { index: 4,
+    prompt: 'What did you do this summer?',
+    qType: 'la',
+    _id: '597762ff16a2930d277b5bee',
+    answers: [],
+    flag: false,
+    options: [] },
+  { index: 5,
+    prompt: 'Select the fruits',
+    qType: 'ma',
+    _id: '597762ff16a2930d277b5bed',
+    answers: [ 'Apples', 'Berries', 'Banannas' ],
+    flag: false,
+    options: [ 'Turkey', 'Chicken', 'Apples', 'Berries', 'Banannas' ] } ]
+    ✓ I should be able to get data for questions
+rep
+{ questions: 
+   [ { options: [Object],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bf1,
+       qType: 'mc',
+       answer: 'preposition',
+       index: 1,
+       prompt: 'What is the term for a type of grammar that describes place?' },
+     { options: [],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bf0,
+       qType: 'fb',
+       index: 2,
+       answer: 'que',
+       prompt: 'What is the latin word for why?' },
+     { options: [Object],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bef,
+       qType: 'tf',
+       answer: 'True',
+       prompt: 'Morgan likes age of empires',
+       index: 3 },
+     { options: [],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bee,
+       qType: 'la',
+       prompt: 'What did you do this summer?',
+       index: 4 },
+     { options: [Object],
+       flag: false,
+       answers: [Object],
+       _id: 597762ff16a2930d277b5bed,
+       qType: 'ma',
+       prompt: 'Select the fruits',
+       index: 5 } ],
+  _id: 597762ff16a2930d277b5bec,
+  index: 1,
+  dueDate: 2019-06-05T19:00:00.000Z,
+  endingMessage: 'Nice job dude',
+  name: 'Homework 1' }
+rep
+haws
+597762fe16a2930d277b5bab
+{ name: 'Homework 1',
+  endingMessage: 'Nice job dude',
+  dueDate: '2019-06-05T19:00:00.000Z',
+  index: 1,
+  _id: '597762ff16a2930d277b5bec',
+  questions: 
+   [ { prompt: 'What is the latin word for why?',
+       answer: 'que',
+       index: 2,
+       qType: 'fb',
+       _id: '597762ff16a2930d277b5bf0',
+       answers: [],
+       flag: false,
+       options: [] },
+     { index: 3,
+       prompt: 'Morgan likes age of empires',
+       answer: 'True',
+       qType: 'tf',
+       _id: '597762ff16a2930d277b5bef',
+       answers: [],
+       flag: false,
+       options: [Object] },
+     { index: 4,
+       prompt: 'What did you do this summer?',
+       qType: 'la',
+       _id: '597762ff16a2930d277b5bee',
+       answers: [],
+       flag: false,
+       options: [] },
+     { index: 5,
+       prompt: 'Select the fruits',
+       qType: 'ma',
+       _id: '597762ff16a2930d277b5bed',
+       answers: [Object],
+       flag: false,
+       options: [Object] } ] }
+haws
+x
+{ options: [ 'preposition', 'noun', 'verb' ],
+  flag: false,
+  answers: [],
+  _id: 597762ff16a2930d277b5bf1,
+  qType: 'mc',
+  answer: 'preposition',
+  index: 1,
+  prompt: 'What is the term for a type of grammar that describes place?' }
+x
+hwChange
+{ questions: 
+   [ { options: [],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bf0,
+       qType: 'fb',
+       index: 2,
+       answer: 'que',
+       prompt: 'What is the latin word for why?' },
+     { options: [Object],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bef,
+       qType: 'tf',
+       answer: 'True',
+       prompt: 'Morgan likes age of empires',
+       index: 3 },
+     { options: [],
+       flag: false,
+       answers: [],
+       _id: 597762ff16a2930d277b5bee,
+       qType: 'la',
+       prompt: 'What did you do this summer?',
+       index: 4 },
+     { options: [Object],
+       flag: false,
+       answers: [Object],
+       _id: 597762ff16a2930d277b5bed,
+       qType: 'ma',
+       prompt: 'Select the fruits',
+       index: 5 } ],
+  _id: 597762ff16a2930d277b5bec,
+  index: 1,
+  dueDate: 2019-06-05T19:00:00.000Z,
+  endingMessage: 'Nice job dude',
+  name: 'Homework 1' }
+hwChange
+res.body
+[ { name: 'Homework 1',
+    endingMessage: 'Nice job dude',
+    dueDate: '2019-06-05T19:00:00.000Z',
+    index: 1,
+    _id: '597762ff16a2930d277b5bec',
+    questions: [ [Object], [Object], [Object], [Object] ] },
+  { name: 'Homework 1',
+    endingMessage: 'Nice job dude',
+    dueDate: '2019-06-05T19:00:00.000Z',
+    index: 2,
+    _id: '597762ff16a2930d277b5bf2',
+    questions: [ [Object], [Object], [Object], [Object], [Object] ] } ]
+res.body
+    ✓ I should be able to edit a question
+
+
+  78 passing (1s)
+  1 failing
+
+  1) Student dashboard information I should be able to get alex luken quiz information:
+
+      Uncaught AssertionError: expected { Object (startDate, _id, ...) } to deeply equal { Object (_id, index, ...) }
+      + expected - actual
+
+             "qType": "ma"
+             "userAnswers": []
+           }
+         ]
+      -  "startDate": "2017-07-25T15:25:51.567Z"
+       }
+      
+      at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)
+      at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)
+      at test/testBackend.js:1499:25
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:619:12)
+      at node_modules/superagent/lib/node/index.js:795:18
+      at IncomingMessage.<anonymous> (node_modules/superagent/lib/node/parsers/json.js:16:7)
+      at endReadableNT (_stream_readable.js:974:12)
+      at _combinedTickCallback (internal/process/next_tick.js:74:11)
+      at process._tickCallback (internal/process/next_tick.js:98:9)
+
+
+

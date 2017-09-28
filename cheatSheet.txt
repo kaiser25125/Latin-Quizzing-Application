@@ -1,0 +1,3 @@
+use db
+show dbs
+db(this is not a placeholder).collection.find({})

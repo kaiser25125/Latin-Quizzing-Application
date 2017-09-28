@@ -1,0 +1,127 @@
+<html  ng-app="latinQuiz">
+<head>
+      <title>Help</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" >
+<link rel="stylesheet" type="text/css" href="css/createClass.css" >
+<link rel="stylesheet" type="text/css" href="css/morgancss.css" >
+<link rel="stylesheet" type="text/css" href="css/quizcss.css" >
+<link rel="stylesheet" type="text/css" href="css/teacherdash.css" >
+<script src="deep-diff-0.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/screenManipulation.js"></script>
+  
+<script src="http://turing.centre.edu/~michael.bradshaw/js/angular.js"> </script>
+<script src="http://turing.centre.edu/~michael.bradshaw/js/angular-route.js"> </script>
+<script src="js/latinQuiz.js"></script>
+<script src="js/screenManipulation.js"></script>
+<!-- jQuery library -->
+<link rel="stylesheet" href="angularjs-datetime-picker.css" />
+ <script src="angularjs-datetime-picker.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id ="content">
+    
+    
+    <div id="helpSection"><p style="text-indent: 4em;">    The bulk add feature utilizes a tag based syntax that reflects html. While in the long run it is very useful and efficient for adding multiple questions to a homework. Below are the generic formats for each question as well as examples. It is important to follow the format to guarantee that the questions are added properly. Feel free copy and past these examples and adjust them to you own needs.</p>
+    <div>
+        <div class ="example">
+    <p>
+    <i>Example 1: Fill In The Blank</i>
+        <br/>
+    &lt;question type= “fill in the blank”&gt;
+        <br/>
+         &lt;prompt&gt;        <br/>
+
+        What is my name?        <br/>
+
+ &lt;/prompt&gt;        <br/>
+
+ &lt;answer&gt;        <br/>
+
+bob        <br/>
+
+ &lt;/answer&gt;        <br/>
+
+ &lt;/question&gt;        <br/>
+
+    </p>
+        </div>
+        <div class ="example"><p>
+            <i>Example 2: Multiple Choice</i><br/>
+    &lt;question type= “multiple choice”&gt;<br/>
+        &lt;prompt&gt;<br/>
+        What is my favorite color<br/>
+&lt;/prompt&gt;<br/>
+&lt;options&gt;<br/>
+&lt;option&gt;Red&lt;/option&gt;<br/>
+&lt;option&gt;Blue&lt;/option&gt;<br/>
+&lt;option&gt;Green&lt;/option&gt;<br/>
+&lt;option&gt;Pink&lt;/option&gt;<br/>
+&lt;/options&gt;<br/>
+&lt;answer&gt;Green&lt;/answer&gt;<br/>
+&lt;/question&gt;<br/>
+
+            
+            </p></div>
+        <div class="example"><p>
+        <i>Example 3: Multiple Answer</i> <br/>
+    &lt;question type= “multiple answer”&gt; <br/>
+        &lt;prompt&gt; <br/>
+        What are my favorite colors <br/>
+&lt;/prompt&gt; <br/>
+&lt;options&gt; <br/>
+&lt;option&gt;Red&lt;/option&gt; <br/>
+&lt;option&gt;Blue&lt;/option&gt; <br/>
+&lt;option&gt;Green&lt;/option&gt; <br/>
+&lt;option&gt;Pink&lt;/option&gt; <br/>
+&lt;/options&gt; <br/>
+&lt;answers&gt; <br/>
+&lt;answer&gt;Red&lt;/answer&gt; <br/>
+&lt;answer&gt;Pink&lt;/answer&gt; <br/>
+&lt;answer&gt;Green&lt;/answer&gt; <br/>
+&lt;/answers&gt; <br/>
+&lt;/question&gt; <br/>
+        </p></div>
+        
+      <div class ="example"><p>
+          <i>Example 4: Long answer</i><br/>
+    &lt;question type= “long answer”&gt;<br/>
+&lt;prompt&gt;What did you do this summer?&lt;/prompt&gt;<br/>
+&lt;/question&gt;<br/>
+          </p></div> 
+        <div class = "example"><p>
+            <i>Example 5: True False</i><br/>
+&lt;question type= “true false”&gt;<br/>
+        &lt;prompt&gt;<br/>
+        Is Centre College in Kentucky?<br/>
+&lt;/prompt&gt;<br/>
+&lt;answer&gt;true&lt;/answer&gt;<br/>
+&lt;/question&gt;<br/>
+
+            
+            </p></div></div>
+     <p style="text-indent: 4em; float:left;">As you can see the syntax is very similar for the question types. For multiple choice/answer, add as many option tags as you need, our examples uses four but you can add more or less. The same applies to the answer tag in the multiple answer. We would recommend making up the bulk add text in a separate document and then pasting it into the application.</p>   
+        
+        
+        
+    </div>
+
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+</body>
+
+</html>

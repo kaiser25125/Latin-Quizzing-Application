@@ -1,0 +1,13 @@
+ <form>
+
+<p>{{question.index}}. {{question.prompt}}
+                <div ng-repeat="option in question.options track by $index" class="option">
+                    <input type="checkbox" disabled="disabled" ng-checked="question.response.includes(option)" name="option" />
+                    
+                    <p ng-if="question.answer.includes(option)" style="color:#006600;">{{option}}</p>
+                    <p ng-if="!(question.answer.includes(option))">{{option}}</p>
+     
+     
+     </div>
+               
+            </form>

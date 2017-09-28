@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <title>Homework Manager</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/screenManipulation.js"></script>
+  </head>
+  <body>
+    <div class="homeworkDiv">
+      <div class="addQuestionDiv">
+	<div class="navBar">
+	    <button type="button">Home</button>
+	    <button type="button">Back</button>
+	    <button type="button">Logout</button>
+	    <button type="button">Save Changes</button>
+	    <button type="button">Cancel</button>
+	</div>
+	<br><br>
+	<div class="homeworkNameDiv" id="homeworkName">
+	  <p class="hwNameView">Homework Name:</p>
+	  <input type="text" name="hwName" class="hwNameInput" placeHolder="Name of Homework...">
+	</div>
+	<div class="homeworkNameDiv">
+	  <p class="hwDueDateView">Due Date:</p>
+	  <input type="datetime-local" name="hwDate" class="hwDateInput" placeHolder="Due Date...">
+	</div>
+	<div class="homeworkNameDiv">
+	  <p class="hwDueDateView">Ending Message:</p>
+	  <input type="text" name="hwDate" class="hwDateInput" placeHolder="Message after quiz...">
+	</div>
+	<div class="multipleQuestionDiv">
+	  <div class="innerMultipleQuestionDiv">
+	    <p class="hwDueDateView" id="addMultipleQuestionP">Add Multiple Questions</p><i class="fa fa-info-circle" aria-hidden="true"  title="Instructions for typing in..."></i>
+	    <textarea wrap="off" id="multipleQuestionTextArea" rows="10" placeholder="Type in multiple questions."></textarea>
+	    <button type="button">Add</button>
+	  </div>
+	</div>
+	<div class="singleQuestionDiv">
+	  <p id="singleQuestionP">Add Single Question</p>
+	<div class="homeworkNameDiv">
+	  <p class="hwNameView">Question Name</p>
+	  <input type="text" name="questionName" class="questionInput" placeHolder="Type in Question...">
+	  </div>
+	<div class="homeworkNameDiv">
+	  <p class="hwNameView">Question Type</p>
+	  <select name="questionType" form="questionForm" class="questionInput">
+	    <option value="default">Select a Question Type...</option>
+	    <option value="fillInBlank">Fill in the Blank</option>
+	    <option value="multipleChoice" selected>Multiple Choice</option>
+	    <option value="longAnswer">Long Answer</option>
+	    <option value="trueFalse">True False</option>
+	    <option value="multipleAnswer">Multiple Answer</option>
+	  </select>
+	</div>
+	<div class="homeworkNameDiv">
+	  <p class="hwNameView">Number of Options:</p>
+	  <select name="questionType" form="questionForm" class="questionInput">
+	    <!-- default to 4 -->
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+	    <option value="6" selected>6</option>
+	  </select>
+	  <p class="hwNameView">Answer:</p>
+	  <form ng-if="questionInput== multipleAnswer">
+	    <div>
+	      <input type="checkbox"  name="option"><input placeholder="Answer..." class="optionCreator" type="text" name="questionName">
+	    </div>
+	    <div>
+	      <input type="checkbox"  name="option"><input placeholder="Answer..." class="optionCreator" type="text" name="questionName">
+	   </div>
+	    <div>
+	      <input type="checkbox"  name="option"><input placeholder="Answer..." class="optionCreator" type="text" name="questionName">
+	    </div>
+	    <div>
+	      <input type="checkbox"  name="option"><input placeholder="Answer..." class="optionCreator" type="text" name="questionName">
+	    </div>
+	    <div>
+	      <input type="checkbox"  name="option"><input placeholder="Answer..." class="optionCreator" type="text" name="questionName">
+	    </div>
+	    <div>
+	      <input type="checkbox"  name="option"><input placeholder="Answer..." class="optionCreator" type="text" name="questionName">
+	    </div>
+	  <!---->
+	  </form>
+	  </div>
+	  <button type="button">Create Question</button>
+	</div>
+      </div>
+      <div class="questionDiv">
+	<p><strong>Questions</strong></p>
+	<div>
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect">
+	    <option value="1" selected>1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+	  </select>
+	  <button type="button"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+	  <button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+	  <span>What is the latin word for why?</span>
+	  <input type="text" name="questionName" class="questionAnswer" value="Cur">
+	  </div>
+	<div>
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect">
+	    <option value="1">1</option>
+	    <option value="2" selected>2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+	  </select>
+	  <button type="button"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+	  <button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+	  <span>Pick out the direct object from "Quintus calls his friend".</span>
+	  <div class="radioAnswer">
+	    <form>
+	    <input type="radio"  name="option" value="Quintus">Quintus
+	    <input type="radio"  name="option" value="calls" checked> calls
+	    <input type="radio"  name="option" value="his friend"> his friend
+	    </form>
+	  </div>
+	</div>
+
+	<div>
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect">
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3" selected>3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+
+	  </select>
+	  <button type="button"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+	  <button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+	  <span>Which of the following have cases:(There are multiple answers)</span>
+	  <div class="radioAnswer">
+	    <input type="checkbox"  name="option" value="noun" checked>noun
+	    <input type="checkbox"  name="option" value="adjective"> adjective
+	    <input type="checkbox"  name="option" value="adverb" > adverb
+	    <input type="checkbox"  name="option" value="preposition" >preposition
+	    <input type="checkbox"  name="option" value="verb"  checked>verb
+	  </div>
+	</div>
+
+	<div>
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect">
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4" selected>4</option>
+	    <option value="5">5</option>
+
+	  </select>
+	  <button type="button"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+	  <button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+	  <span>Is Alex fluent in latin</span>
+	  <div class="radioAnswer">
+	    <form>
+	    <input type="radio"  name="option" value="True" checked>True
+	    <input type="radio"  name="option" value="False">False
+	    </form>
+	  </div>
+	</div>
+	<div>
+	  <select name="questionOrder" form="questionForm" class="questionOrderSelect">
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5" selected>5</option>
+
+	  </select>
+	  <button type="button"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+	  <button type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+	  <span>Desribe any confusion you have about the reading(Long Answer)</span>
+	</div>
+	<!--<br></br>-->
+      </div>
+    </div>
+  </body>
+</html>
